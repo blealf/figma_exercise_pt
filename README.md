@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Figma to HTML CSS and JS 
+## Built with React  (create-react-app)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To run this project go to root folder and type in terminal
+` yarn && yarn start `
 
