@@ -1,34 +1,65 @@
 import React from 'react';
-import { FaApple } from 'react-icons/fa';
+import { IoArrowBackCircle, IoCheckmarkCircleSharp } from 'react-icons/io5';
+import { 
+  VCardIcon,
+  CopyIcon
+ } from '../icons/Icons';
 
 const Card = () => {
+
+  const menuToggle = (e) => {
+    const header = document.getElementById('header');
+    console.log(header);
+    if (header.classList.contains('toggle_header')){
+      setTimeout(() => {
+        header.classList.remove('toggle_header');
+      }, 200);
+    } else {
+      setTimeout(() => {
+        header.classList.add('toggle_header');
+      }, 200);
+    }
+  }
+
   return (
     <div className="card">
+
+      <button 
+        onClick={(e) => {menuToggle(e)}} 
+        className="btn menu_btn"> Menu
+      </button>  
+
       <div className="card_title">
-        <FaApple /> <h3>Card</h3>
+        <IoArrowBackCircle /> <h3>Cards</h3>
       </div>
       <div className="card_content">
+
         <div className="card_header">
-          <h3><FaApple/></h3>
-          <div>
-            <h3>Virtual Card <FaApple /></h3>
-            <p>Lorem ipsum dolor sir amet </p>
+          <div className="v_card_title">
+            <h3><VCardIcon/></h3>
+            <div>
+              <div className="virtual_card">
+                <h3>Virtual Card </h3>
+                <h4><IoCheckmarkCircleSharp /></h4>
+              </div>
+              <p>Lorem ipsum dolor sir amet </p>
+            </div>
           </div>
           <div className="create_card"> <button className="btn create_card"> Create New Card </button></div>
         </div>
+
         <div className="card_display">
           <div className="card_image_dark">
             <div className="layer1"><img src="/images/card_dark.png" alt="card_dark"/></div>
             <div className="layer2">
-              <button className="btn btn-danger">Freeze Card</button>
-              <button className="btn btn-success"> Delete Card</button>
+              <button className="btn btn-success">Freeze Card</button>
+              <button className="btn btn-danger"> Delete Card</button>
             </div>
           </div>
           <div className="card_image_light">
             <div className="layer1"><img src="/images/card_light.png" alt="card_light"/></div>
             <div className="layer2"></div>
             <div className="layer3"></div>
-            <div className="layer4"></div>
           </div>
           <div className="card_properties">
             <div className="properties_wrapper">
@@ -46,7 +77,7 @@ const Card = () => {
               </div>
               <div className="property">
                 <div className="name">Billing Address:</div>
-                <div className="value">Patricia HQ, SA 109827 <FaApple/></div>
+                <div className="value">Patricia HQ, SA 109827 <CopyIcon/></div>
               </div>
               <div className="property">
                 <div className="name">Date Created:</div>
@@ -58,6 +89,7 @@ const Card = () => {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   )

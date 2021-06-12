@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
-import { FaApple } from 'react-icons/fa';
 import DatePicker from 'react-date-picker';
+import { 
+  DownloadIcon,
+  DateIcon,
+  AmazonIcon,
+  NikeIcon,
+  StarbucksIcon,
+  NetflixIcon,
+  AppleIcon,
+  AppleIconAlt
+ } from '../icons/Icons';
+
 
 const Activity = () => {
   const [value, onChange] = useState(new Date());
@@ -10,27 +20,35 @@ const Activity = () => {
       <div className="activity_header">
         <h4>Recent Activity</h4>
         <div className="date_pick">
+          <DateIcon />
+          <h4>Start Date:</h4>
           <DatePicker
           onChange={onChange}
           value={value}
+          clearIcon={null}
+          calendarIcon={null}
+          format={"dd/MM/yy"}
+          style={{
+            border: 'none'
+          }}
         />
         </div>
-        <h3><FaApple /></h3>
+        <h3><DownloadIcon /></h3>
       </div>
       <div className="activities_wrapper">
         <div className="activity">
           <div className="property">
-            <h3><FaApple /></h3>
+            <h3><AmazonIcon /></h3>
             <div className="name">
               <p>Amazon</p>
-              <p className="activity_time">just now</p>
+              <p className="activity_time">Just now</p>
             </div>
           </div>
           <div className="value">$377.23</div>
         </div>
         <div className="activity">
           <div className="property">
-            <h3><FaApple /></h3>
+            <h3><NikeIcon /></h3>
             <div className="name">
               <p>Nike</p>
               <p className="activity_time">Today</p>
@@ -40,7 +58,7 @@ const Activity = () => {
         </div>
         <div className="activity">
           <div className="property">
-            <h3><FaApple /></h3>
+            <h3><StarbucksIcon /></h3>
             <div className="name">
               <p>Starbucks</p>
               <p className="activity_time">Yesterday</p>
@@ -50,7 +68,7 @@ const Activity = () => {
         </div>
         <div className="activity">
           <div className="property">
-            <h3><FaApple /></h3>
+            <h3><NetflixIcon /></h3>
             <div className="name">
               <p>Netflix</p>
               <p className="activity_time">June 17</p>
@@ -60,7 +78,7 @@ const Activity = () => {
         </div>
         <div className="activity">
           <div className="property">
-            <h3><FaApple /></h3>
+            <h3><AppleIcon /></h3>
             <div className="name">
               <p>Apple</p>
               <p className="activity_time">June 15</p>
@@ -70,7 +88,7 @@ const Activity = () => {
         </div>
         <div className="activity">
           <div className="property">
-            <h3><FaApple /></h3>
+            <h3><StarbucksIcon /></h3>
             <div className="name">
               <p>StarBucks</p>
               <p className="activity_time">June 13</p>
@@ -80,7 +98,7 @@ const Activity = () => {
         </div>
         <div className="activity">
           <div className="property">
-            <h3><FaApple /></h3>
+            <h3><NikeIcon /></h3>
             <div className="name">
               <p>Nike</p>
               <p className="activity_time">June 11</p>
@@ -90,7 +108,7 @@ const Activity = () => {
         </div>
         <div className="activity">
           <div className="property">
-            <h3><FaApple /></h3>
+            <h3><AppleIconAlt /></h3>
             <div className="name">
               <p>Apple</p>
               <p className="activity_time">June 09</p>

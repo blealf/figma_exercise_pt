@@ -1,11 +1,16 @@
 import React from 'react'
-import { FaApple } from 'react-icons/fa';
+import { 
+  NotificationIcon,
+  MoreIcon,
+ } from '../icons/Icons';
 
 const User = () => {
   return (
     <div className="user_nav">
-      <div><FaApple/></div> 
-      <div><FaApple/> <img src="/images/user.png" alt="user_image"/> </div>  
+      <div><NotificationIcon/></div> 
+      <div> 
+        <img src="/images/user.png" alt="user_image"/> 
+        <h3><MoreIcon/></h3></div>  
     </div>
   )
 }

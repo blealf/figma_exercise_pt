@@ -1,10 +1,60 @@
+:root {
+  --bg-color: #F9FAFC;
+  --border: #EFF2F7;
+  --main-color: #FFFFFF;
+  --bold-letter: #575A66;
+  --success: #0F6256;
+  --danger: #CC4945;
+}
 
+* {
+  color: #989AA6;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy") format("woff2"),
+      url("./styles/fonts/Gilroy-Medium.woff") format("woff");
+  font-weight: 400;
+}
 
 .App {
   background: #F9FAFC;
   display: grid;
-  grid-template-columns: 230px 4fr 2fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr;
+  padding: 20px;
+  // color: #989AA6;
+}
+
+@media only screen and (min-width: 768px) {
+  .App {
+    background: #F9FAFC;
+    display: grid;
+    grid-template-columns: 230px 5fr 3fr;
+    grid-template-rows: 100px 1fr;
+    // color: #989AA6;
+    padding: 0px;
+  }
+}
+
+.btn {
+  height: 40px;
+  padding: 0px 15px 0px 15px;
+  border-radius: 8px;
+}
+
+.btn-success {
+  border: 1px solid var(--success);
+  background: var(--main-color);
+  color: var(--success);
+}
+
+.btn-danger {
+  border: 1px solid var(--danger);
+  background: var(--main-color);
+  color: var(--danger);
 }
 
 

@@ -3,6 +3,9 @@ import Header from './components/Header';
 import Card from './components/Card';
 import Activity from './components/Activity';
 import UserNav from './components/UserNav';
+import './styles/CardResponsive.scss';
+import './styles/Card.scss';
+
 
 function App() {
   return (
